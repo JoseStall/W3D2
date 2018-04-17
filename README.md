@@ -7,27 +7,27 @@
     une partie qui dit comment se servir du programme, et quelles sont les gems utilisées
     une partie qui explique ce qui a été fait : l'email envoyé, le nombre de mairies touchées, le handle Twitter qui a été utilisé
 
-Notre groupe est composé de Guillaume Delory, Ampuero Pierre, Alvarez Alexandro
+Notre groupe est composé de Guillaume Delory, Ampuero Pierre, Alvarez Alexandro<br>
 
-slack : @guillaume,@Ampuero Pierre,@kalejo
+slack : @guillaume,@Ampuero Pierre,@kalejo<br>
 
-Notre Dossier W3D2 est composé :
-  -du dossier bundle install (qui permet de mettre à jour les gems)
-  -d'un fichier gitignore (qui permet d'ignorer nos identifiants)
-  -d'un fichier Gemfile (qui classe les gems qu'on utilise)
-  -du fichier gmail.rb (à partir de sprinsheet d'envoyer les mails aux mairies)
-  -handle_twitter.rb (il permet de récupérer les comptes utilisateurs à partir de google et de les incrémenters dans le sprinsheet)
+Notre Dossier W3D2 est composé :<br>
+  -du dossier bundle install (qui permet de mettre à jour les gems)<br>
+  -d'un fichier gitignore (qui permet d'ignorer nos identifiants)<br>
+  -d'un fichier Gemfile (qui classe les gems qu'on utilise)<br>
+  -du fichier gmail.rb (à partir de sprinsheet d'envoyer les mails aux mairies)<br>
+  -handle_twitter.rb (il permet de récupérer les comptes utilisateurs à partir de google et de les incrémenters dans le sprinsheet)<br>
   -mairie.rb (le fichier principal de notre projet qui récupère les noms,adresse mails et code postal pour les insérers dans
-  le sprinsheet)
-  -twitter.rb (il permet de follows les utilisateurs)
+  le sprinsheet)<br>
+  -twitter.rb (il permet de follows les utilisateurs)<br>
   
-Nous avons utilisés les gems :
--pry
--google_drive
--nogiri
--json
--csv
--dotenv
+Nous avons utilisés les gems :<br>
+-pry<br>
+-google_drive<br>
+-nogiri<br>
+-json<br>
+-csv<br>
+-dotenv<br>
 
 Pour utiliser le programme, il faut installer le bundle afin de récupérer nos versions de gem, il faut ouvrir le fichier
 mairies.rb puis de lancer les méthodes qui seront indiquer en commentaire, puis ouvrir le fichier gmail.rb
