@@ -8,7 +8,7 @@ require "csv"
 
 #Ici, on connecte google API et on déclare ws en variable absolue avec le @
 session = GoogleDrive::Session.from_config("config.json")
-@ws = session.spreadsheet_by_key("1TWu-jicfHUX8vv8iype6G8VS1E3_GuUsmRJEFHhK_L0").worksheets[0]
+@ws = session.spreadsheet_by_key("1S3sTXhAIRYT8znscsT4BiZBRy1Vi7Jw0jZQKvET2hIc").worksheets[0]
 
 
 def get_all_the_urls_of_city
@@ -48,7 +48,7 @@ def put_it_in_spreadsheet
 	for z in 0..@x.length
 		@ws[z+2,1] = @x[z]
 		@ws[z+2,2] = @y[z]
-		@ws[z+2,3] = "59"
+		@ws[z+2,3] = "69"
  	end
 
 	@ws.save
@@ -77,3 +77,4 @@ def put_it_in_csv
 end
 
 #put_it_in_csv
+
