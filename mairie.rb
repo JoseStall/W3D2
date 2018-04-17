@@ -59,7 +59,7 @@ def put_it_in_spreadsheet
 
 end
 
-put_it_in_spreadsheet
+#put_it_in_spreadsheet
 
 
 def put_it_in_json
@@ -71,7 +71,7 @@ def put_it_in_json
 	end
 end
 
-#put_it_in_json
+put_it_in_json
 
 def put_it_in_csv
 	get_email_corp("http://annuaire-des-mairies.com/nord.html")
@@ -80,5 +80,5 @@ def put_it_in_csv
 
 end
 
-#put_it_in_csv
+put_it_in_csv
 
