@@ -25,13 +25,14 @@ end
 def get_email_corp(page_url)
 	@x = []
 	@y = []
+	@dpt = []
 	$administration = Hash.new
 	doc = Nokogiri::HTML(open(page_url))
 	doc.css("td a.lientxt").each do |element|
 		@x << ville = element.text.capitalize
 		doc = Nokogiri::HTML(open("http://annuaire-des-mairies.com" + element["href"]))
 		@y << lien = doc.xpath('//html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text
-
+		@dpt << lien = doc.xpath('/html/body/div/main/section[3]/div/table/tbody/tr[1]/td[2]').text
 
 	end
 	@x.each_with_index {|k,v| $administration[k] = @y[v]}
@@ -39,17 +40,19 @@ end
 
 #get_email_corp("http://annuaire-des-mairies.com/nord.html")
 
+
 def put_it_in_spreadsheet
 	get_email_corp("http://annuaire-des-mairies.com/nord.html")
 
 	@ws[1,1] = "Ville"
 	@ws[1,2] = "Adresse Email"
 	@ws[1,3] = "Code postal"
+	
 
 	for z in 0..@x.length
 		@ws[z+2,1] = @x[z]
 		@ws[z+2,2] = @y[z]
-		@ws[z+2,3] = "79"
+		@ws[z+2,3] = @dpt[z] 
  	end
 
 	@ws.save
