@@ -10,24 +10,16 @@ require "csv"
 session = GoogleDrive::Session.from_config("config.json")
 @ws = session.spreadsheet_by_key("1TWu-jicfHUX8vv8iype6G8VS1E3_GuUsmRJEFHhK_L0").worksheets[0]
 
-# 1er exercice, on récupére l'adresse mail d'une page demandé
 
-def get_the_email_of_a_townhal_from_its_webpage
-	doc = Nokogiri::HTML(open('http://annuaire-des-mairies.com/95/vaureal.html'))
-	puts doc.xpath('//html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text
-end
-
-#get_the_email_of_a_townhal_from_its_webpage
-
-def get_all_the_urls_of_val_doise_townhalls
-	doc = Nokogiri::HTML(open('http://annuaire-des-mairies.com/val-d-oise.html'))
+def get_all_the_urls_of_city
+	doc = Nokogiri::HTML(open('http://annuaire-des-mairies.com/nord.html'))
 	doc.css("td a.lientxt").each do |element|
 		puts element.text
 		puts "http://annuaire-des-mairies.com" + element["href"]
 	end
 end
 
-#get_all_the_urls_of_val_doise_townhalls
+#get_all_the_urls_of_city
 
 def get_email_corp(page_url)
 	@x = []
@@ -44,7 +36,7 @@ def get_email_corp(page_url)
 	@x.each_with_index {|k,v| $administration[k] = @y[v]}
 end
 
-#get_email_corp()
+#get_email_corp("http://annuaire-des-mairies.com/nord.html")
 
 def put_it_in_spreadsheet
 	get_email_corp("http://annuaire-des-mairies.com/nord.html")
