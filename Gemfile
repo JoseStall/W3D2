@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
-ruby 2.3.4
-gem 'nokogiri', github: 'sparklemotion/nokogiri'
-# https://github.com/sparklemotion/nokogiri.git
-gem 'google_drive' , gitub: 'https://github.com/gimite/google-drive-ruby'
+ruby "2.3.4"
+
+gem 'nokogiri' 
+gem 'google_drive'  
 gem 'pry'
-gem 'install json'
+gem 'json'
+gem 'dotenv'
+gem 'gmail'

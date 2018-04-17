@@ -25,3 +25,4 @@ z = "https://www.google.fr/search?q=twitter+commune+" + @ws[x,2]
 end
 @ws[1,4] = "handle twitter"
 
+@ws.save
