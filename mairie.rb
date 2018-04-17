@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env ruby
-=======
 # On appelle ici les GEM dont on a besoin
 require 'rubygems'
 require "nokogiri"
@@ -41,7 +39,7 @@ def get_email_corp(page_url)
 		@x << ville = element.text.capitalize
 		doc = Nokogiri::HTML(open("http://annuaire-des-mairies.com" + element["href"]))
 		@y << lien = doc.xpath('//html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text
-		
+
 
 	end
 	@x.each_with_index {|k,v| $administration[k] = @y[v]}
@@ -88,4 +86,4 @@ def put_it_in_csv
 end
 
 #put_it_in_csv
->>>>>>> 9853936139a0ca06d910368e2fc81e3a6eeb1b31
+
